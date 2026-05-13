@@ -1,47 +1,85 @@
-﻿class Host
-{
-    public int  Id { get; set; }
-    public string Name { get; set; }
-    
-}
-
-class Apartment
-{
-    public int Id { get; set; }
-    public List<int> HostId { get; set; } = new();
-}
-
-class Program
+﻿class Program
 {
     static void Main(string[] args)
     {
         var hosts = new List<Host>
         {
-            new Host { Id = 1, Name = "Алексей" },
-            new Host { Id = 2, Name = "Мария" },
-            new Host { Id = 3, Name = "Иван" },
-        };
-
-        var apartments = new List<Apartment>
-        {
-            new Apartment { Id = 1, HostId = new List<int> { 1, 2 } },  
-            new Apartment { Id = 2, HostId = new List<int> { 3 } },
-            new Apartment { Id = 3, HostId = new List<int> { 1 } },
+            new()
+            {
+                Id = 1,
+                Name = "Саша",
+                Phone = "09999999999",
+                Apartments = new List<Apartment>
+                {
+                    new()
+                    { 
+                        Id = 1, 
+                        Address = "Вулиця Пушкина 1",
+                        Rooms = 10,
+                        Price = 2
+                    }, 
+                    new() 
+                    { 
+                        Id = 2, 
+                        Address = "Вулиця Пушкина 2",
+                        Rooms = 10,
+                        Price = 2
+                    }, 
+                    new()
+                    {
+                        Id = 3,
+                        Address = "Вулиця Пушкина 3",
+                        Rooms = 10,
+                        Price = 2
+                    }, 
+                    new()
+                    {
+                        Id = 4,
+                        Address = "Вулиця Пушкина 4",
+                        Rooms = 10,
+                        Price = 2
+                    }
+                }
+            },
+            new()
+            {
+                Id = 2, 
+                Name = "Даня",
+                Phone = "09999999991",
+                Apartments = new List<Apartment> { new() { Id = 5 } }
+            },
+            new()
+            {
+                Id = 3, 
+                Name = "Тест",
+                Phone = "09999999992",
+                Apartments = new List<Apartment>
+                    { new() { Id = 6 }, new() { Id = 7 }, new() { Id = 8 } }
+            },
         };
         
         Console.WriteLine("Choose host:");
         Console.WriteLine(string.Join(", ", hosts.Select(h => h.Id)));
-        var choosedHostId = int.Parse(Console.ReadLine());
-
-        Console.WriteLine("Choose apartment:");
-        foreach (var a in apartments)
+        
+        if (!int.TryParse(Console.ReadLine(), out var chosenHostId))
         {
-            if (a.HostId.Contains(choosedHostId))
-            {
-                Console.WriteLine($"Apartment ID: {a.Id}");
-            }
+            Console.WriteLine("Could not  parse choice"); 
+            return;
+        }
+        
+        var chosenHost = hosts.FirstOrDefault(h => h.Id == chosenHostId);
+
+        if (chosenHost is null)
+        {
+            Console.WriteLine("Host not found");
+            return;
+        }
+        
+        Console.WriteLine(chosenHost);
+        
+        foreach (var apartment in chosenHost.Apartments)
+        {
+            Console.WriteLine(apartment);
         }
     }
-
-  
 }
