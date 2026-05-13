@@ -1,29 +1,4 @@
-﻿public class Apartment
-{
-    public int Id { get; set; }
-    public string Address { get; set; }
-    public int Rooms { get; set; }
-    public decimal Price { get; set; }
-
-    public override string ToString()
-    {
-        return $"[ID: {Id}] {Address} | Rooms: {Rooms} | Price: {Price}";
-    } 
-}
-public class Host
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Phone { get; set; }
-    public List<Apartment> Apartments { get; set; } = new();
-
-    public override string ToString()
-    {
-        return $"[ID: {Id}] {Name} | Phone: {Phone} | Apartments: {Apartments.Count}:";
-    }
-}
-
-class Program
+﻿class Program
 {
     static void Main(string[] args)
     {
@@ -82,16 +57,16 @@ class Program
                     { new() { Id = 6 }, new() { Id = 7 }, new() { Id = 8 } }
             },
         };
-
- 
         
         Console.WriteLine("Choose host:");
         Console.WriteLine(string.Join(", ", hosts.Select(h => h.Id)));
+        
         if (!int.TryParse(Console.ReadLine(), out var chosenHostId))
         {
             Console.WriteLine("Could not  parse choice"); 
             return;
         }
+        
         var chosenHost = hosts.FirstOrDefault(h => h.Id == chosenHostId);
 
         if (chosenHost is null)
@@ -101,6 +76,7 @@ class Program
         }
         
         Console.WriteLine(chosenHost);
+        
         foreach (var apartment in chosenHost.Apartments)
         {
             Console.WriteLine(apartment);
