@@ -1,0 +1,14 @@
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\bin\Debug\net10.0\BookingSystem.exe
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\bin\Debug\net10.0\BookingSystem.deps.json
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\bin\Debug\net10.0\BookingSystem.runtimeconfig.json
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\bin\Debug\net10.0\BookingSystem.dll
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\bin\Debug\net10.0\BookingSystem.pdb
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\obj\Debug\net10.0\BookingSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\obj\Debug\net10.0\BookingSystem.AssemblyInfoInputs.cache
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\obj\Debug\net10.0\BookingSystem.AssemblyInfo.cs
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\obj\Debug\net10.0\BookingSystem.csproj.CoreCompileInputs.cache
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\obj\Debug\net10.0\BookingSystem.dll
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\obj\Debug\net10.0\refint\BookingSystem.dll
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\obj\Debug\net10.0\BookingSystem.pdb
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\obj\Debug\net10.0\BookingSystem.genruntimeconfig.cache
+C:\Users\Danylo\RiderProjects\BookingSystem\BookingSystem\obj\Debug\net10.0\ref\BookingSystem.dll
